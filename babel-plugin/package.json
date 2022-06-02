@@ -1,0 +1,36 @@
+{
+  "name": "babel-plugin",
+  "version": "0.1.0",
+  "description": "Simple babel plugin",
+  "author": "孤狼 <wolf@evolify.cn>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "@babel/types": "^7.18.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/traverse": "^7.18.2",
+    "@types/babel__core": "^7.1.19",
+    "unbuild": "^0.7.4"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  }
+}
