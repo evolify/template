@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin",
+  "name": "babel-plugin-",
   "version": "0.1.0",
   "description": "Simple babel plugin",
   "author": "孤狼 <wolf@evolify.cn>",
@@ -7,19 +7,18 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
-    "dev": "unbuild --stub",
-    "build": "unbuild"
+    "build": "rollup -c"
   },
   "dependencies": {
     "@babel/types": "^7.18.4"
@@ -28,7 +27,11 @@
     "@babel/core": "^7.18.2",
     "@babel/traverse": "^7.18.2",
     "@types/babel__core": "^7.1.19",
-    "unbuild": "^0.7.4"
+    "rollup": "^2.75.6",
+    "esbuild": "^0.14.43",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "typescript": "^4.7.3"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0"
