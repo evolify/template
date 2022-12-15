@@ -3,6 +3,6 @@
 This is a simple template to create webpack plugin.
 
 ### dependencies
-- build with `rollup`、`esbuild`
+- build with `unbuild`
 - write plugin in `typescript`
 - types and utils with `webpack`

@@ -3,5 +3,5 @@
 This is a simple template to create npm lib.
 
 ### dependencies
-- build with `rollup`、`esbuild`
+- build with `unbuild`
 - write plugin in `typescript`

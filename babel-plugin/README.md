@@ -3,6 +3,6 @@
 This is a simple template to create babel plugin.
 
 ### dependencies
-- build with `rollup`、`esbuild`
+- build with `unbuild`
 - write plugin in `typescript`
 - types and utils with `@babel/types`、`@babel/core`

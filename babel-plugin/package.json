@@ -3,35 +3,31 @@
   "version": "0.1.0",
   "description": "Simple babel plugin",
   "author": "孤狼 <wolf@evolify.cn>",
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "unbuild",
+    "stub": "unbuild --stub"
   },
   "dependencies": {
     "@babel/types": "^7.18.4"
   },
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/traverse": "^7.18.2",
-    "@types/babel__core": "^7.1.19",
-    "rollup": "^2.75.6",
-    "esbuild": "^0.14.43",
-    "rollup-plugin-esbuild": "^4.9.1",
-    "rollup-plugin-dts": "^4.2.2",
-    "typescript": "^4.7.3"
+    "@types/babel__core": "^7.1.19"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0"
